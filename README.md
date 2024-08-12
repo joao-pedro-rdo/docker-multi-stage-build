@@ -95,4 +95,3 @@ Ultilizei nomeclatura padrao do docker registry para nomear a imagem `joaoprdo/.
 ## Referências
 
 - [Documentação Oficial do Docker sobre Multi-Stage Builds](https://docs.docker.com/develop/develop-images/multistage-build/)
-- [Curso DevOps Pro](link-para-o-curso)
