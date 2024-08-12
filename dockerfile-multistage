@@ -1,0 +1,11 @@
+FROM golang:1.22-alpine as builder
+WORKDIR /build
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+
+FROM alpine:latest as app
+WORKDIR /app
+# Preciso copiar da minha imagem anterior
+COPY --from=builder /build/main .
+CMD ["./main"]
+
